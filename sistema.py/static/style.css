@@ -1,0 +1,74 @@
+/*Variaveis de cor: muda aqui e o site inteiro muda */
+:root {
+    --principal: #2f6fb0;
+    --fundo: #eef2f7;
+    --texto: #13233b;
+    --borda: #dfdbed;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+
+}
+/*cabecalho part*/
+
+header {
+    background-color: var(--principal);
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 32px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.3rem;
+    
+}
+
+nav a {
+    color: #fff;
+    margin-right: 16px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+
+}
+
+/* Area principal */
+
+main {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 16px 0px;
+}
+
+h2 {
+  margin-top: 0;
+
+}
+/*Mensagens */
+
+.aviso {
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.aviso.ok {
+    background-color: #dfdbed;
+    color: #17582d;
+}

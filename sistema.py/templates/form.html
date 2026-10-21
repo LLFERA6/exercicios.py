@@ -1,11 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+{%$ block conteudo%}
+
+<h2>{{ titulo }}</h2>
+
+<form method="post" class="formulario">
+<label>
+    Nota 1 (0 a 10)
+    {% if editando %}
+       <input type="text" value="{{ aluno.nome }}" disabled>
+    {% else %}
+       <input type="text" name="nome" value="{{ aluno.nome if aluno else ''}}" required autofocus>
+       
+</label>
+<label>
+    Nota 2 (0 a 10)
+    <input type="text" name="nota1" inputmode="decimal" value="{{ aluno.nota2 if aluno else}}" required>
+</label>
+<div>
+    <button type="submit">Salvar</button>
+    <a href="{{ url_for('inicio') }}">Cancelar</a>
+</div>
+</form>
+{% endblock %}
